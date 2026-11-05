@@ -169,7 +169,7 @@ canvas{position:fixed;inset:0;pointer-events:none;z-index:20}
   next.addEventListener("click",function(){
     if(i<pages.length-1){show(i+1);return}
     stage.classList.remove("reading");
-    setTimeout(function(){stage.classList.remove("open");show(0);note.textContent="Toque na margarida para abrir";seal.focus()},reduce?0:700);
+    setTimeout(function(){stage.classList.remove("open");show(0);note.textContent="";seal.focus()},reduce?0:700);
   });
   var cv=document.getElementById("fx"),cx=cv.getContext("2d"),parts=[],raf=0;
   function size(){cv.width=innerWidth;cv.height=innerHeight}
