@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Para minha garota</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;600&family=Dancing+Script:wght@600&display=swap">
 <style>
 :root{--bg:#0B1640;--bg2:#16286A;--bg3:#080F30;--hint:#FFE07A;--navy:#1740B8;--gold:#FFC928;--paper:#FFF6CF;--ink:#0F2A7A;--muted:#3D5AA8;
 box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -63,6 +63,13 @@ body{margin:0;background:linear-gradient(130deg,var(--bg),var(--bg2),var(--bg3),
 .play[hidden]{display:none}
 .decal{position:absolute;right:-4%;bottom:-6%;width:38%;height:auto;z-index:6;transform:rotate(8deg);pointer-events:none;filter:drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff) drop-shadow(0 5px 6px rgba(0,0,0,.35));transition:opacity .4s}
 .decal[hidden]{display:none}
+  .to{text-align:center;line-height:1}
+.to small{display:block;font-family:"Plus Jakarta Sans",sans-serif;font-size:.45em;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:.3em}
+.to b{font-family:"Dancing Script",cursive;font-weight:600;font-size:1.7em;background:linear-gradient(90deg,#1740B8,#4677F2,#F2B400,#1740B8);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
+.to .heart{display:inline-block;color:#F06A8C;font-size:.7em;margin-left:.15em;animation:beat 1.2s ease-in-out infinite}
+@keyframes shine{to{background-position:200% center}}
+@keyframes beat{50%{transform:scale(1.3)}}
+@media (prefers-reduced-motion:reduce){.to b,.to .heart{animation:none}}
 @media (max-width:480px){
   .stage{width:84vw;aspect-ratio:auto;height:min(74vh,600px)}
   .stk{width:64px!important}
@@ -93,7 +100,7 @@ canvas{position:fixed;inset:0;pointer-events:none;z-index:20}
   <div class="env" id="env">
     <div class="back"></div>
     <div class="flap"></div>
-    <div class="letter">Para minha garota</div>
+    <div class="letter"><div class="to"><small>para a minha garota</small><b>Marizinha</b><span class="heart">♡</span></div></div>
     <div class="pocket"></div>
     <button class="seal" id="seal" type="button" aria-label="Abrir o envelope">
       <svg viewBox="-50 -50 100 100" aria-hidden="true"><g class="daisy"><g class="petals" fill="#FFFFFF" stroke="#D6DEF0" stroke-width="1"><ellipse cy="-27" rx="7" ry="17"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(30)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(60)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(90)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(120)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(150)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(180)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(210)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(240)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(270)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(300)"/><ellipse cy="-27" rx="7" ry="17" transform="rotate(330)"/></g><circle r="17" fill="#FFC928" stroke="#F2B400" stroke-width="1.5"/><g class="blink"><circle cx="-6" cy="-3" r="2.2" fill="#3A2A10"/><circle cx="6" cy="-3" r="2.2" fill="#3A2A10"/></g><path d="M-6 4Q0 10 6 4" stroke="#3A2A10" stroke-width="2" fill="none" stroke-linecap="round"/><circle cx="-11" cy="3" r="2.6" fill="#FF9AA8" opacity=".7"/><circle cx="11" cy="3" r="2.6" fill="#FF9AA8" opacity=".7"/></g></svg>
